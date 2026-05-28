@@ -1,6 +1,6 @@
 # 环境搭建指南
 
-本指南帮助你在**任何一台新电脑**（Linux / Windows / macOS）上完成 AI for Protein Design 实验环境的搭建。
+本指南帮助你在**任何一台新电脑**（Linux / Windows / macOS）上完成 AI for Protein Design 实验环境的搭建。这个文件主要指导你配置**OpenCode**，配置完成之后你将实现
 
 ---
 
@@ -129,7 +129,11 @@ cd ~/protein_learn
 opencode
 ```
 
-启动后你会进入 OpenCode 的交互界面。输入以下内容告诉 AI 你的需求：
+启动后你会进入 OpenCode 的交互界面。你可以选择购买 OpenCode 的 Go 套餐，或者介入自己预先配置并充值了的API。如果不想付费，也可以使用DeepSeek V4 Flash Free。
+
+OpenCode 的文档见 `https://opencode.ai/docs`。
+
+输入以下内容告诉 AI 你的需求：
 
 ```
 请协助我从头配置好环境
@@ -142,4 +146,4 @@ AI 会读取 `AGENTS.md`，按照步骤引导你：
 3. 配置 SSH 密钥免密登录
 4. 自动化部署 ProteinMPNN、RFDiffusion、ESMFold
 
-你只需要按提示操作即可，不需要记住任何命令。
+你只需要按提示操作即可，不需要记住任何命令。但仍然强烈推荐**阅读 OpenCode 官方文档**，或者在 OpenCode 里面提问（示例）“请根据 OpenCode 官方文档，介绍你的主要功能和用法”。
