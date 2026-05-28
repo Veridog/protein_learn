@@ -1,6 +1,6 @@
 # 环境搭建指南
 
-本指南帮助你在**任何一台新电脑**（Linux）上完成 AI for Protein Design 实验环境的搭建。
+本指南帮助你在**任何一台新电脑**（Linux / Windows / macOS）上完成 AI for Protein Design 实验环境的搭建。
 
 ---
 
@@ -24,6 +24,7 @@
 - **Ubuntu / Debian**：按 `Ctrl+Alt+T`
 - **其他 Linux**：在应用菜单搜索 `Terminal` 或 `终端`
 - **macOS**：按 `Cmd+Space`，输入 `Terminal` 回车
+- **Windows**：按 `Win+R`，输入 `cmd` 回车。或用 `Win+R` 输入 `powershell` 打开 PowerShell。
 
 打开后你会看到一个黑色（或白色）的窗口，里面有一行提示符，比如 `user@hostname:~$`。这就是你输入命令的地方。
 
@@ -42,7 +43,9 @@
 node --version
 ```
 
-如果显示版本号（如 `v22.x.x`），跳过这一步。如果提示 `command not found`，执行以下命令安装：
+如果显示版本号（如 `v22.x.x`），跳过这一步。如果提示 `command not found`，按你的系统选择安装方式：
+
+#### Linux / macOS
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
@@ -53,6 +56,23 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 ```bash
 nvm install 24
 ```
+
+#### Windows
+
+Windows 不支持 nvm-sh。请使用 **nvm-windows**：
+
+1. 访问 <https://github.com/coreybutler/nvm-windows/releases>
+2. 下载最新版 `nvm-setup.exe` 并安装
+3. 打开新的 cmd 窗口，输入：
+
+```cmd
+nvm install 24
+nvm use 24
+```
+
+或者直接下载 Node.js 安装包：访问 <https://nodejs.org>，下载 LTS 版本（v24.x.x）的 `.msi` 安装程序，双击安装即可。
+
+---
 
 验证安装成功：
 
