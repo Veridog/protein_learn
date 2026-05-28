@@ -1,6 +1,6 @@
 # 环境搭建指南
 
-本指南帮助你在**任何一台新电脑**（Linux / Windows / macOS）上完成 AI for Protein Design 实验环境的搭建。这个文件主要指导你配置**OpenCode**，配置完成之后你将实现
+本指南帮助你在**任何一台新电脑**（Linux / Windows / macOS）上完成 AI for Protein Design 实验环境的搭建。这个文件主要指导你配置**OpenCode**，配置完成之后你将实现基于Agent的彻底的自动化环境搭建。（但OpenCode可能会向你发起命令执行请求，需及时批准）
 
 ---
 
