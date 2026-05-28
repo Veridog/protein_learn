@@ -713,16 +713,20 @@ mkdir -p /root/autodl-tmp/test_outputs
 ```
 
 ```bash
-echo ">test" > /root/autodl-tmp/test.fasta
-echo "MKTVRQERLKSIVRILERSKEPVSGAQLAEELSVSRQVIVQDIAYLRSLGYNIVATPRGYVLAGG" >> /root/autodl-tmp/test.fasta
+cat > /root/autodl-tmp/test_ubi.yaml << 'EOF'
+version: 1
+sequences:
+  - protein:
+      id: A
+      sequence: MKTVRQERLKSIVRILERSKEPVSGAQLAEELSVSRQVIVQDIAYLRSLGYNIVATPRGYVLAGG
+      msa: empty
+EOF
 ```
 
 ```bash
-conda activate boltz && boltz predict \
-    --model boltz2 \
-    --cache /root/autodl-tmp/weights/boltz \
+conda activate boltz && boltz predict /root/autodl-tmp/test_ubi.yaml \
     --out_dir /root/autodl-tmp/test_outputs \
-    --sampling_steps 50 \
-    --diffusion_samples 1 \
-    /root/autodl-tmp/test.fasta
+    --output_format pdb
 ```
+
+> YAML + `msa: empty` 是离线运行的正确方式。FASTA 格式需要 `--use_msa_server` 联网获取 MSA，不适用于无网络环境。
