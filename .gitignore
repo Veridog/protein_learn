@@ -1,0 +1,46 @@
+# Large data and outputs
+outputs/
+data/pdbs/
+data/msas/
+data/fastas/
+logs/
+experiments/
+
+# Conda environments
+envs/
+tools/*/venv/
+tools/*/.conda/
+
+# Model weights (too large for git)
+tools/alphafold/
+tools/esm/
+tools/rfdiffusion/
+tools/boltz/
+
+# SLURM logs
+*.out
+*.err
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.eggs/
+dist/
+build/
+*.egg-info/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets
+.env
