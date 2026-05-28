@@ -2,6 +2,12 @@
 
 本文档记录从头配置 AI for Protein Design 课程实验环境的完整步骤。遵循此文档，任何人在任何一台新的 AutoDL 云主机上均可复现。
 
+---
+
+2026.05.29注：本项目今日起完全实现**Agent自动化**。此MANUAL文件用于保存历史。Boltz-2 的 conda 环境被放置在数据盘，并在系统盘使用Symlink实现挂载。
+
+---
+
 **磁盘策略**：系统盘 `/` (30 GB) 仅放 conda 环境；数据盘 `/root/autodl-tmp/` (50 GB) 放代码、权重、输出。
 
 **工具清单**：ProteinMPNN、RFDiffusion、ESMFold、Boltz-2。

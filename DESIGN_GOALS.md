@@ -1,6 +1,6 @@
 # 🧬 蛋白质设计任务大全：从入门到精通
 
-> 基于管线：`RFDiffusion → ProteinMPNN → ESMFold/AlphaFold → ESM`
+> 基于管线：`RFDiffusion → ProteinMPNN → ESMFold/Boltz-2 → ESM`
 
 ---
 
@@ -34,7 +34,7 @@
 ### 管线步骤
 
 ```
-RFDiffusion（生成 backbone）→ ProteinMPNN（序列设计）→ AlphaFold2 multimer（验证结合）
+RFDiffusion（生成 backbone）→ ProteinMPNN（序列设计）→ Boltz-2（验证结合）
 → 筛选：iPAE < 10, pLDDT > 85, binder RMSD < 2Å
 ```
 
@@ -57,7 +57,7 @@ RFDiffusion（生成 backbone）→ ProteinMPNN（序列设计）→ AlphaFold2 
 
 ```
 从 PDB 提取 motif → RFdiffusion 支架生成 → ProteinMPNN 序列设计
-→ AlphaFold2 验证 motif 恢复精度（RMSD < 1Å）
+→ Boltz-2 验证 motif 恢复精度（RMSD < 1Å）
 ```
 
 ---
@@ -209,7 +209,7 @@ RFpeptides（RFdiffusion 的环肽扩展，Rettie et al., 2025 发表）。
 ```
 1. RFdiffusion → 生成 N 个 backbone（建议 N=100-1000）
 2. ProteinMPNN → 每个 backbone 生成 1-8 个序列
-3. ESMFold/AlphaFold2 → 结构自洽性验证
+3. ESMFold/Boltz-2 → 结构自洽性验证
 4. 筛选 → pLDDT, RMSD, PAE, 接触数, 半径 of gyration
 5. ESM → 功能/性质评估（溶解度、稳定性等）
 ```
