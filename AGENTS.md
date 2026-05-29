@@ -30,6 +30,10 @@
 
 关机时所有文件保留，但再次开机时可能遇到无可用GPU的问题。此时可以告诉用户有一种选择：克隆实例。可以将实例克隆到有GPU的新主机。可能需要一些时间。克隆完成之后两实例完全相同，原有的无GPU的实例可以删除。但注意这种操作限制一天最多10次。并且会遇到`AgentGuides/Situations/26.05.29:DUPLICATE_BUG.md` 里面提到的问题。
 
+## 实验注意
+
+每次实验所产生的新文件，永远要在实验对应的文件夹内，不可以散落在外面。这个原则应用于每次实验的EXPERIMENT.md的制定。比如，Exp4.3:TetrahedralOligomer/这个实验的ProteinMPNN产生的结果就应该在云端的Exp4.3:TetrahedralOligomer/outputs/proteinmpnn里面。
+
 ## 杂项
 
 ### 命名逻辑
